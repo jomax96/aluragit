@@ -1,0 +1,55 @@
+	<meta charset="utf-8">
+
+	<h1>ADIVINA EL NUMERO</h1>
+
+	<input/>
+	<button>CLICK PARA ADIVINAR</button>
+
+	<script>
+	function saltarLinea(){
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+	function imprimir(texto) {
+		document.write(texto);
+		saltarLinea();
+	}
+
+	function sorteo(n){
+		return Math.round(Math.random()*n);
+	}
+
+	function compararNumeroPensado(nuemroLanzado){
+
+	var nuemroLanzado = parseInt(input.value);
+
+	if(nuemroPensado == nuemroLanzado){
+		alert("usted acerto, el numero pensado es: " + nuemroPensado);
+	} else {
+		alert("lo siento has errado, intenta de nuevo" );
+	}	
+		input.value = "";
+		input.focus(); 
+		nuemroPensado = sorteo(10);
+		
+
+	}
+
+
+	var input = document.querySelector("input");
+	var boton = document.querySelector("button");
+	input.focus();
+	var nuemroLanzado;
+	var nuemroPensado = sorteo(10);
+	var intentos = 3;
+	var contador = 1;
+	
+	boton.onclick = compararNumeroPensado;	
+
+
+
+
+
+	</script>

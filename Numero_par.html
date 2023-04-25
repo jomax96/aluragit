@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+
+	NUMEROS PARES
+
+<script>
+function saltarLinea(){
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+}
+
+function imprimir(texto) {
+	document.write(texto);
+	saltarLinea();
+}
+saltarLinea();
+var contador = 1;
+var limite = 100;
+
+while(contador <= limite){
+	
+	if(contador % 2 == 0){
+		imprimir(contador);
+	}
+	contador++;
+}
+saltarLinea()
+imprimir("<h3>FIN</h3>" );
+
+</script>

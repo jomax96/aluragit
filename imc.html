@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+
+
+<script type="text/javascript">
+function saltarLinea(){
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+}
+
+function imprimir(texto) {
+
+	document.write(texto);
+	saltarLinea();
+}
+
+function imcCalcular(peso, altura){
+
+return (peso/(altura * altura));
+}
+
+
+nombre = prompt("ingrese su nombre ");
+pesoInformado = prompt(nombre + ", informe su peso");
+alturainformado = prompt(nombre + ", informe su altura");
+
+calcularImc = imcCalcular(pesoInformado, alturainformado);
+
+imprimir(calcularImc);
+
+if(calcularImc < 18.5){
+	imprimir("abajo del lo recomendado");
+}else if(calcularImc >= 18.5 && calcularImc <= 24.9){
+	imprimir("IMC en lo recomendado");
+}else if(calcularImc <= 25 ){
+	imprimir("IMC sobre lo recomendado: sobrepeso!!!!!!");
+}
+
+</script>
